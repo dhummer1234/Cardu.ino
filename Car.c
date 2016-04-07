@@ -26,20 +26,8 @@ string moveInstruct[];
 
 // Function declarations
 
-bool dataCheck(checking, index) {
 
-  if (prevSonar + carMove < checking || prevSonar - carMove > checking) {
-
-     // If the current sonar reading is within the expected range
-
-  } else if (moveInstruct[x] == "Left" || moveInstruct[x] == "Right") {
-
-      // If the last instructions given to the motors were good
-
-    }
-
-}
-
+// This function performs the sonar reading
 int sonarCar() {
 
   pinMode(sonarPin1, OUTPUT);
@@ -58,6 +46,24 @@ int sonarCar() {
 
 }
 
+
+// This function check if the sonar readings are accurate
+bool dataCheck(checking, index) {
+
+  if (prevSonar + carMove < checking || prevSonar - carMove > checking) {
+
+     // If the current sonar reading is within the expected range
+
+  } else if (moveInstruct[x] == "Left" || moveInstruct[x] == "Right") {
+
+      // If the last instructions given to the motors were good
+
+    }
+
+}
+
+
+// This function tells the motors to move in a particualr direction for a specified time
 void moveCar(direction) {
 
   if (direction == "up") {
@@ -108,6 +114,8 @@ void moveCar(direction) {
 
 }
 
+
+// This function tells the motors to stop running
 void breakCar() {
 
   digitalWrite(motorLeft1, HIGH);
@@ -117,17 +125,21 @@ void breakCar() {
 
 }
 
+
+// This function uses the sonar readings to decide what to do next
 void thinkCar(sonar, index) {
 
-  //This function needs to look at the sonar input
-
-  thinkCarResult -> temporary value to represent the output of this function
+  //  thinkCarResult -> temporary value to represent the output of this function
 
   motorInstructions[index] = thinkCarResult;
 
   moveCar(thinkCarResult);
 
 }
+
+
+
+// Core Arduino Functions
 
 void setup() {
 
