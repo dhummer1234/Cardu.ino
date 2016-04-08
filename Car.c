@@ -116,7 +116,7 @@ void moveCar(direction) {
 
 
 // This function tells the motors to stop running
-void breakCar() {
+void brakeCar() {
 
   digitalWrite(motorLeft1, HIGH);
   digitalWrite(motorLeft2, HIGH);
