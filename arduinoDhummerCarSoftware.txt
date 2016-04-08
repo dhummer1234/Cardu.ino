@@ -1,0 +1,55 @@
+// DHummer My current code
+// will obviously be included with the other code
+
+void setup() {
+  // put your setup code here, to run once:
+
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+
+}
+
+
+
+// stops the car from getting closer than 5cm to an object in front
+//also stops the car from continuing further if it is placed closer than 5cm to an object
+void emergencyBrake () {
+  if (currSonar <= 5)
+  {
+  brakeCar();
+  }
+}
+
+
+
+//function for autonomous navigation of the maze
+void autonomous() {
+  if (currSonar <= 5)
+  {
+  moveCar(left)
+  delay(timefor90degturn);
+  scanright() ;
+  }
+  else 
+  {
+    moveCar(up)
+  }
+
+}
+
+
+
+//function for the scan feature of autonomous function, for within autonomous function only
+void scanRight() {
+  moveCar(right)
+  delay(TimeFor30DegTurn)
+  if (currSonar <= 5)
+  {
+    scanRight()
+  }
+
+  else() {
+    moveCar(up)
+  }
