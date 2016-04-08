@@ -63,7 +63,7 @@ bool dataCheck(checking, index) {
 }
 
 
-// This function tells the motors to move in a particualr direction for a specified time
+// This function tells the motors to move in a particular direction for a specified time
 void moveCar(direction) {
 
   if (direction == "up") {
@@ -75,7 +75,7 @@ void moveCar(direction) {
 
     delay(carForwards);
 
-    breakCar();
+    brakeCar();
 
   } else if (direction == "down") {
 
@@ -86,7 +86,7 @@ void moveCar(direction) {
 
     delay(carForwards);
 
-    breakCar();
+    brakeCar();
 
   } else if (direction == "left") {
 
@@ -97,7 +97,7 @@ void moveCar(direction) {
 
     delay(carTurn);
 
-    breakCar();
+    brakeCar();
 
   } else if (direction == "right") {
 
@@ -108,7 +108,7 @@ void moveCar(direction) {
 
     delay(carTurn);
 
-    breakCar();
+    brakeCar();
 
   }
 
