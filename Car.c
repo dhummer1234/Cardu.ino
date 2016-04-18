@@ -168,19 +168,6 @@ void loop() {
 
 // DHummer My current code 
 
-
-void setup() {
-  // put your setup code here, to run once:
-
-}
-
-void loop() {
-  // put your main code here, to run repeatedly:
-
-}
-
-
-
 // stops the car from getting closer than 5cm to an object in front
 //also stops the car from continuing further if it is placed closer than 5cm to an object
 void emergencyBrake () {
